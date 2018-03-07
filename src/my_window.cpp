@@ -13,9 +13,8 @@ MyWindow::MyWindow() : QWidget(), m_currentPoint(0)
     }
 
     m_painter = new QPainter(this);
-    m_pen = new QPen(Qt::black);
+    m_pen = new QPen();
 
-    m_pen->setWidth(1);
     m_painter->setPen(&m_pen);
 }
 
