@@ -6,6 +6,7 @@
 #include <QPoint>
 #include <QPainter>
 #include <QPen>
+#include <QVector>
 
 class MyWindow : public QWidget
 {
@@ -14,9 +15,7 @@ class MyWindow : public QWidget
 
     private:
         int m_currentPoint;
-        QPoint *m_point1;
-        QPoint *m_point2;
-        QPoint *m_point3;
+        QVector<QPoint*> m_points;
         QPainter *m_painter;
         QPen *m_pen;
 };

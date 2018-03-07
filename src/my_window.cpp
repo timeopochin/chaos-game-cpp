@@ -1,11 +1,16 @@
 #include "my_window.h"
 #include <QMouseEvent>
+#include <cstdlib>
+#include <time>
 
 MyWindow::MyWindow() : QWidget(), m_currentPoint(0)
 {
-    m_point1 = new QPoint();
-    m_point2 = new QPoint();
-    m_point3 = new QPoint();
+    std::srand(time(0));
+
+    for (int i(0); i < 3; i++)
+    {
+        m_points.push_back(new QPoint());
+    }
 
     m_painter = new QPainter(this);
     m_pen = new QPen(Qt::black);
