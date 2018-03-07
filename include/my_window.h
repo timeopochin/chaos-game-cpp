@@ -7,13 +7,8 @@
 
 class MyWindow : public QWidget
 {
-    Q_OBJECT
-
     public:
         MyWindow();
-
-    public slots:
-        //SLOTS
 
     private:
         int currentPoint;
