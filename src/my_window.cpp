@@ -21,25 +21,11 @@ MyWindow::MyWindow() : QWidget(), m_currentPoint(0)
 
 MyWindow::mousePressEvent(QMouseEvent *cursor)
 {
-    switch (m_currentPoint)
+    if (m_currentPoint < 3)
     {
-        case 0:
-            m_point1->setX(cursor->x());
-            m_point1->setY(cursor->y());
-            break;
-        case 1:
-            m_point2->setX(cursor->x());
-            m_point2->setY(cursor->y());
-            break;
-        case 2:
-            m_point3->setX(cursor->x());
-            m_point3->setY(cursor->y());
-            break;
-        case 3:
-            while (true)
-            {
-                drawChaosDot();
-            }
+        m_points[m_currentPoint]->setX(cursor->x);
+        m_points[m_currentPoint]->setY(cursor->y);
+        m_currentPoint++;
     }
-    m_currentPoint++;
+}
 }
