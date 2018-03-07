@@ -3,6 +3,7 @@
 
 #include <QApplication>
 #include <QWidget>
+#include <QPoint>
 
 class MyWindow : public QWidget
 {
@@ -15,7 +16,12 @@ class MyWindow : public QWidget
         //SLOTS
 
     private:
-        //Attributes
+        int currentPoint;
+        QPoint *m_point1;
+        QPoint *m_point2;
+        QPoint *m_point3;
+        QPainter *m_painter;
+        QPen *m_pen;
 };
 
 #endif
