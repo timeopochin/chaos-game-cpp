@@ -4,6 +4,8 @@
 #include <QApplication>
 #include <QWidget>
 #include <QPoint>
+#include <QPainter>
+#include <QPen>
 
 class MyWindow : public QWidget
 {
