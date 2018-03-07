@@ -22,8 +22,8 @@ MyWindow::mousePressEvent(QMouseEvent *cursor)
 {
     if (m_currentPoint < 3)
     {
-        m_points[m_currentPoint]->setX(cursor->x);
-        m_points[m_currentPoint]->setY(cursor->y);
+        m_points[m_currentPoint]->setX(cursor->x());
+        m_points[m_currentPoint]->setY(cursor->y());
         m_currentPoint++;
     }
 }
