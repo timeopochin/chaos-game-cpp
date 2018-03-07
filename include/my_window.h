@@ -11,7 +11,7 @@ class MyWindow : public QWidget
         MyWindow();
 
     private:
-        int currentPoint;
+        int m_currentPoint;
         QPoint *m_point1;
         QPoint *m_point2;
         QPoint *m_point3;

@@ -1,6 +1,6 @@
 #include "my_window.h"
 
-MyWindow::MyWindow() : QWidget(), currentPoint(0)
+MyWindow::MyWindow() : QWidget(), m_currentPoint(0)
 {
     m_point1 = new QPoint();
     m_point2 = new QPoint();
