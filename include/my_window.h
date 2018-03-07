@@ -18,6 +18,9 @@ class MyWindow : public QWidget
         QVector<QPoint*> m_points;
         QPainter *m_painter;
         QPen *m_pen;
+        QPoint *m_currentPos;
+
+        void drawChaosDot();
 };
 
 #endif

@@ -14,6 +14,7 @@ MyWindow::MyWindow() : QWidget(), m_currentPoint(0)
 
     m_painter = new QPainter(this);
     m_pen = new QPen();
+    m_currentPos = new QPoint();
 
     m_painter->setPen(&m_pen);
 }
@@ -26,5 +27,18 @@ MyWindow::mousePressEvent(QMouseEvent *cursor)
         m_points[m_currentPoint]->setY(cursor->y());
         m_currentPoint++;
     }
+    else
+    {
+        drawChaosDot();
+    }
 }
+
+MyWindow::drawChaosDot()
+{
+    int dotIndex(std::rand() % 3);
+    QPoint pointToDraw;
+    pointToDraw.setX((m_currentPos->x()*2 + m_points[dotIndex]->x())/3);
+    pointToDraw.setY((m_currentPos->y()*2 + m_points[dotIndex]->y())/3)
+
+    m_painter->drawPoint(pointToDraw);
 }
